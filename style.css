@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+}
+
+#pri{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    height: 500px;
+    width: 500px;
+    background-color: rgba(113, 113, 253, 0.596);
+}
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Citações</title>
+</head>
+<body>
+    <div id="pri">
+        <h1>Quote aleatória de anime</h1>
+        <button id="fetchButton">Obter Citação</button>
+        <div id="quote"></div>
+    </div>
+    
+
+    <script>
+        document.getElementById('fetchButton').addEventListener('click', function() {
+            fetch("https://animechan.xyz/api/random")
+                .then((response) => response.json())
+                .then((quote) => {
+                    console.log(quote);
+                    const obj = {
+                        anime: quote.anime,
+                        character: quote.character,
+                        quote: quote.quote
+                    };
+                    console.log(obj);
+                    document.getElementById('quote').innerHTML = `Anime: ${obj.anime}<br>Personagem: ${obj.character}<br>Quote: ${obj.quote}`;
+                });
+        });
+    </script>
+
+
+</body>
+</html>
