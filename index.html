@@ -8,12 +8,11 @@
 </head>
 <body>
     <div id="pri">
-        <h1>Quote aleatória de anime</h1>
+        <h1>Frase aleatoria de anime</h1>
         <button id="fetchButton">Obter Citação</button>
         <div id="quote"></div>
     </div>
-    
-
+ 
     <script>
         document.getElementById('fetchButton').addEventListener('click', function() {
             fetch("https://animechan.xyz/api/random")
@@ -26,7 +25,11 @@
                         quote: quote.quote
                     };
                     console.log(obj);
-                    document.getElementById('quote').innerHTML = `Anime: ${obj.anime}<br>Personagem: ${obj.character}<br>Quote: ${obj.quote}`;
+                    document.getElementById('quote').innerHTML = `Anime: ${obj.anime}<br>
+
+                    Personagem: ${obj.character}<br>
+
+                    Quote: ${obj.quote}`;
                 });
         });
     </script>
